@@ -1,0 +1,44 @@
+.header-parent {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  color: var(--text-white);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header-parent .header-logo img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation-fill-mode: forwards;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-parent .header-logo img:hover {
+  cursor: pointer;
+  transform: rotate(-5deg);
+}
+
+.header-parent .header-title ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.header-parent .header-title ul li {
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transition: transform 0.2s ease-in-out,border-bottom 0.2s ease-in-out, border-right 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.header-parent .header-title ul li:hover {
+  border-right: 2px solid var(--text-blue-current);
+  border-bottom: 2px solid var(--text-blue-current);
+  cursor: pointer;
+  transform: rotate(5deg);
+}

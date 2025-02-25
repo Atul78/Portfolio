@@ -1,0 +1,27 @@
+.contact-main {
+    height: 100%;
+    background-color: var(--primary-main-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: start;
+}
+
+.contact-parent {
+  margin: 5rem 0;
+  display: flex;
+  gap: 2rem;
+  width: 80%;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex: 1;
+}
