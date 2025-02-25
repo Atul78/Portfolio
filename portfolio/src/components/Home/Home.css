@@ -56,17 +56,17 @@
 
 .linkedin, .github, .mail {
   font-size: 3rem;
-  color: var(--text-white);
+  /* color: var(--text-white); */
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
 .linkedin {
-    color: rgb(88, 88, 255);
+    color: #5858ff;
 }
 
 .mail {
-    color: rgb(255, 160, 128);
+    color: #ffa080;
 }
 
 @keyframes fadeIn {

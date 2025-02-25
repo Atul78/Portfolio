@@ -27,9 +27,9 @@ const Home = () => {
               solutions for modern web applications. 🚀
             </p>
             <div className="icons">
-              {Icons.LinkedIn}
-              {Icons.GitHub}
-              {Icons.Email}
+              {Icons.LinkedIn('#5858ff', 28)}
+              {Icons.GitHub('#ffb5b5', 28)}
+              {Icons.Email('#ffa080', 28)}
             </div>
           </div>
         </div>
