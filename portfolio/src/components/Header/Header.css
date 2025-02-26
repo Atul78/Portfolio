@@ -33,7 +33,8 @@
   padding: 10px;
   border-bottom: 2px solid transparent;
   border-right: 2px solid transparent;
-  transition: transform 0.2s ease-in-out,border-bottom 0.2s ease-in-out, border-right 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, border-bottom 0.2s ease-in-out,
+    border-right 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .header-parent .header-title ul li:hover {
@@ -41,4 +42,18 @@
   border-bottom: 2px solid var(--text-blue-current);
   cursor: pointer;
   transform: rotate(5deg);
+}
+
+.header-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* .responsive-header-title {
+  } */
+
+  .header-menu {
+    display: inline-block;
+  }
+  
 }

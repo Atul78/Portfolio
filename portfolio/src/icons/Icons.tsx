@@ -2,6 +2,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { FaPhone } from "react-icons/fa6";
 import { GiHouse } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Icons = {
     LinkedIn: (color = "black", size = 24) => <FaLinkedin style={{ color, fontSize: size }} />,
@@ -9,6 +10,7 @@ const Icons = {
     Email: (color = "black", size = 24) => <CgMail style={{ color, fontSize: size }} />,
     Phone: (color = "black", size = 24) => <FaPhone style={{ color, fontSize: size }} />,
     House: (color = "black", size = 24) => <GiHouse style={{ color, fontSize: size }} />,
+    Menu: (color = "black", size = 24) => <RxHamburgerMenu style={{ color, fontSize: size }} />,
   };
 
 export default Icons;
