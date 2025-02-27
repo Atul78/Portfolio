@@ -59,7 +59,7 @@ const ContactForm = ({ formik }: any) => {
 
 const InputField = ({ id, label, name, type = "text", formik }: any) => {
   return (
-    <div className="input-container">
+    <div>
       <label htmlFor={id} className="common-p">
         {label}
       </label>
@@ -73,7 +73,7 @@ const InputField = ({ id, label, name, type = "text", formik }: any) => {
         placeholder={label.toUpperCase()}
         className="common-input"
       />
-        <p className="error-msg">{formik.errors[name]}</p>
+      <p className="error-msg">{formik.errors[name]}</p>
     </div>
   );
 };
