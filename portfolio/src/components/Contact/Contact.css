@@ -55,7 +55,6 @@
 }
 
 .contact-form-parent .contact-name {
-  /* border: 2px solid red; */
   display: flex;
   gap: 1rem;
   width: 100%;
@@ -63,11 +62,8 @@
   align-items: center;
 }
 
-.contact-form-parent .common-p {
-  margin-bottom: 0.5rem;
-}
-
 .common-input {
+  margin-top: 0.5rem;
   padding: 0.6rem 0.3rem;
   border-radius: 0.3rem;
   border: none;
@@ -80,7 +76,7 @@
 }
 
 .submit-button {
-  margin-top: 2rem;
+  margin-top: 4rem;
   padding: 0.6rem 1rem;
   border: none;
   border-radius: 0.3rem;
@@ -126,6 +122,23 @@
   height: inherit;
 }
 
+.error-msg {
+  color: red;
+  margin: 0.5rem 0;
+  min-height: 1rem;
+  font-size: 0.875rem;
+  visibility: hidden;
+}
+
+.error-msg:empty {
+  display: block;
+  visibility: hidden;
+}
+
+.error-msg:not(:empty) {
+  visibility: visible;
+}
+
 
 @media screen and (max-width: 768px) {
   .contact-parent {
@@ -139,5 +152,9 @@
     align-items: center;
     padding: 2rem 0;
     border-top: 2px solid var(--primary-color);
+  }
+  .contact-name {
+    flex-direction: row;
+    width: 100%;
   }
 }
