@@ -8,26 +8,41 @@ const Header = () => {
 
   const toggleMenu = () => {
     setToggle(!toggle);
-  }
+  };
 
   return (
     <header className="header-parent">
       <div className="header-logo">
-        <img src={portfolio} alt="network error" />
+        <img src={portfolio} alt="Logo" />
       </div>
-      <div className={toggle ? "responsive-header-title": 'header-title'}>
+      <div className={toggle ? "responsive-header-title" : "header-title"}>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Certificates</li>
-          <li>Contact</li>
+          <li>
+            {Icons.Home("#1e90ff", 20)}
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            {Icons.Skills("#1e90ff", 20)}
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            {Icons.Services("#1e90ff", 20)}
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            {Icons.Projects("#1e90ff", 20)}
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            {Icons.Contact("#1e90ff", 20)}
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
       <div className="header-menu">
-        <button onClick={toggleMenu}>{Icons.Menu("#7c7cff", 28)}</button>
+        <button onClick={toggleMenu}>
+          {toggle ? Icons.Close("#1e90ff", 28) : Icons.Menu("#1e90ff", 28)}
+        </button>
       </div>
     </header>
   );

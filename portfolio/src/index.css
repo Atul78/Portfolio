@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 :root {
   --primary-main-color: #232323;
   --primary-color: #333333;

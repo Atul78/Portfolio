@@ -8,11 +8,13 @@
 }
 
 .skills-parent {
-  margin: 5rem 0;
+  margin: 1rem 0;
+  padding: 4rem 0;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 80%;
+  border-top: 2px solid var(--primary-color);
 }
 
 .skills {

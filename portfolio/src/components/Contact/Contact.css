@@ -1,121 +1,143 @@
 .contact-main {
-    height: 100%;
-    background-color: var(--primary-main-color);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: start;
+  height: 100%;
+  background-color: var(--primary-main-color);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: start;
 }
 
 .contact-parent {
-  margin: 5rem 0;
+  margin: 1rem 0;
+  padding: 4rem 0;
+  border-top: 2px solid var(--primary-color);
   display: flex;
   gap: 2rem;
   width: 80%;
 }
 
 .contact-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .contact-info h2 {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 .me {
-    color: var(--text-blue-current);
+  color: var(--text-blue-current);
 }
 
 .contact-info p {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    flex: 1;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
+  width: 100%;
 }
 
 .contact-form-parent {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
 }
 
 .contact-form-parent .contact-name {
-    /* border: 2px solid red; */
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-form-parent .common-p {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .common-input {
-    padding: 0.6rem 0.3rem;
-    border-radius: 0.3rem;
-    border: none;
+  padding: 0.6rem 0.3rem;
+  border-radius: 0.3rem;
+  border: none;
 }
 
 .message-input {
-    width: 100%;
-    height: 90px;
-    border-radius: 0.3rem;
+  width: 100%;
+  height: 90px;
+  border-radius: 0.3rem;
 }
 
 .submit-button {
-    margin-top: 2rem;
-    padding: 0.6rem 1rem;
-    border: none;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #1E90FF, #0077b5);
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
+  margin-top: 2rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #1e90ff, #0077b5);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
 .submit-button:hover {
-    background: linear-gradient(45deg, #0077b5, #1E90FF);
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 119, 181, 0.4);
+  background: linear-gradient(45deg, #0077b5, #1e90ff);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 119, 181, 0.4);
 }
 
 .submit-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 5px rgba(0, 119, 181, 0.5);
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 119, 181, 0.5);
 }
 
 .submit-button::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, rgba(0, 0, 0, 0) 70%);
-    transition: all 0.4s ease-out;
-    transform: tr
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 10%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  transition: all 0.4s ease-out;
+  transform: tr;
 }
 .message-text-area {
-    width: 100%;
-    height: inherit;
+  width: 100%;
+  height: inherit;
+}
+
+
+@media screen and (max-width: 768px) {
+  .contact-parent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    border-top: 2px solid var(--primary-color);
+  }
 }

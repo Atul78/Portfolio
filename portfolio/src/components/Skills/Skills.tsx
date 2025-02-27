@@ -4,7 +4,7 @@ import images from "../../constants/images"; // Adjust the path based on your fo
 const TechnicalSkills = () => {
   return (
     <>
-      <div className="skills-main">
+      <div className="skills-main" id="skills">
         <div className="skills-parent">
           <h1>
             Technical <span className="me">Skills</span>
@@ -41,10 +41,6 @@ const TechnicalSkills = () => {
             <div className="nodejs">
               <img src={images.nodejs} alt="Node.js" className="common-img" />
               <p>Node.js</p>
-            </div>
-            <div className="firebase">
-              <img src={images.firebase} alt="Firebase" className="common-img" />
-              <p>Firebase</p>
             </div>
             <div className="git">
               <img src={images.git} alt="GitHub" className="common-img" />
