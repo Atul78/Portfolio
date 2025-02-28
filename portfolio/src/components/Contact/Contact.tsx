@@ -1,6 +1,6 @@
 import { ToastContainer, toast } from "react-toastify";
 import { useFormik } from "formik";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import Icons from "../../icons/Icons";
 import { validationSchema } from "../../validations/Validations";
 import "./Contact.css";
@@ -82,6 +82,7 @@ const InputField = ({ id, label, name, type = "text", formik }: any) => {
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mldgqgwn");
+  console.log(state);
   const formik = useFormik({
     initialValues: {
       firstName: "",
