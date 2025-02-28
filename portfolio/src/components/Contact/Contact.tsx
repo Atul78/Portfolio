@@ -1,4 +1,6 @@
+import { ToastContainer, toast } from "react-toastify";
 import { useFormik } from "formik";
+import { useForm, ValidationError } from "@formspree/react";
 import Icons from "../../icons/Icons";
 import { validationSchema } from "../../validations/Validations";
 import "./Contact.css";
@@ -79,6 +81,7 @@ const InputField = ({ id, label, name, type = "text", formik }: any) => {
 };
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("mldgqgwn");
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -88,8 +91,23 @@ const Contact = () => {
       message: "",
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
-      console.log("Form Submitted:", values);
+    onSubmit: async (values, { resetForm }) => {
+      const formData = {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        phone: values.phone,
+        email: values.email,
+        message: values.message,
+      };
+      const response = await handleSubmit(formData);
+      console.log(response);
+      
+      if (response.body.ok) {
+        toast.success("Message sent successfully! ✅", { autoClose: 3000 });
+        resetForm();
+      } else {
+        toast.error("Something went wrong. Please try again. ❌", { autoClose: 3000 });
+      }
     },
   });
 
@@ -101,6 +119,7 @@ const Contact = () => {
           <ContactForm formik={formik} />
         </div>
       </div>
+      <ToastContainer position="top-right" />
     </div>
   );
 };
