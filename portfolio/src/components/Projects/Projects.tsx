@@ -2,7 +2,7 @@ import "./Projects.css";
 
 const Projects = () => {
   return (
-    <div className="projects-container">
+    <div className="projects-container" id = "projects">
       <div className="project-card">
         <h1 className="section-title">
           <span className="me">P</span>rojects

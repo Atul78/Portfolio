@@ -3,45 +3,38 @@ import portfolio from "../../assets/Screenshot 2025-02-25 130857.png";
 import Icons from "../../icons/Icons";
 import "./Header.css";
 
-const Header = () => {
-  const [toggle, setToggle] = useState(false);
+const NAV_ITEMS = [
+  { id: "home", label: "Home", icon: Icons.Home },
+  { id: "skills", label: "Skills", icon: Icons.Skills },
+  { id: "services", label: "Services", icon: Icons.Services },
+  { id: "projects", label: "Projects", icon: Icons.Projects },
+  { id: "contact", label: "Contact", icon: Icons.Contact },
+];
 
-  const toggleMenu = () => {
-    setToggle(!toggle);
-  };
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="header-parent">
       <div className="header-logo">
         <img src={portfolio} alt="Logo" />
       </div>
-      <div className={toggle ? "responsive-header-title" : "header-title"}>
+      <nav className={isMenuOpen ? "responsive-header-title" : "header-title"}>
         <ul>
-          <li>
-            {Icons.Home("#1e90ff", 20)}
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            {Icons.Skills("#1e90ff", 20)}
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            {Icons.Services("#1e90ff", 20)}
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            {Icons.Projects("#1e90ff", 20)}
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            {Icons.Contact("#1e90ff", 20)}
-            <a href="#contact">Contact</a>
-          </li>
+          {NAV_ITEMS.map(({ id, label, icon }) => (
+            <li key={id}>
+              {icon("#1e90ff", 20)}
+              <a href={`#${id}`} onClick={closeMenu}>{label}</a>
+            </li>
+          ))}
         </ul>
-      </div>
+      </nav>
       <div className="header-menu">
-        <button onClick={toggleMenu}>
-          {toggle ? Icons.Close("#1e90ff", 28) : Icons.Menu("#1e90ff", 28)}
+        <button onClick={toggleMenu} aria-label="Toggle navigation menu">
+          {isMenuOpen ? Icons.Close("#1e90ff", 28) : Icons.Menu("#1e90ff", 28)}
         </button>
       </div>
     </header>

@@ -59,7 +59,7 @@ const ContactForm = ({ formik }: any) => {
 
 const InputField = ({ id, label, name, type = "text", formik }: any) => {
   return (
-    <div>
+    <div className="input-field">
       <label htmlFor={id} className="common-p">
         {label}
       </label>
