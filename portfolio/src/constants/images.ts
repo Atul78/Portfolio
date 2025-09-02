@@ -9,7 +9,7 @@ const images = {
     nodejs: "https://img.icons8.com/color/48/000000/nodejs.png",
     firebase: "https://img.icons8.com/color/48/000000/firebase.png",
     git: "https://img.icons8.com/color/48/000000/github.png",
-    gitlab: "https://img.icons8.com/color/48/000000/gitlab.png",
+    express: "https://miro.medium.com/max/6668/1*XP-mZOrIqX7OsFInN2ngRQ.png",
   };
   
   export default images;

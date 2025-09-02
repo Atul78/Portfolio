@@ -135,14 +135,14 @@ const ContactInfo = () => {
         Let’s Build Something Amazing Together! 🚀 Got a cool idea? Need a
         developer? Or just want to chat about tech? Drop me a message!
       </p>
-      <ContactDetail icon={Icons.Phone("#ffe120", 24)} text="+918901720459" />
+      <ContactDetail icon={Icons.Phone("#ffe120", 24)} text="+91XXXXXXX" />
       <ContactDetail
         icon={Icons.Email("#ffa080", 24)}
-        text="ritiksharma678678@gmail.com"
+        text="portfolio@gmail.com"
       />
       <ContactDetail
         icon={Icons.House("#ea4e4e")}
-        text="122004, Village Khedki Daula, Gurugram, Haryana"
+        text="48746, Mohali, Punjab"
       />
     </div>
   );

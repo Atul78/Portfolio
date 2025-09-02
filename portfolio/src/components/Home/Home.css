@@ -138,7 +138,7 @@
   color: var(--text-white);
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid var(--text-blue-current);
+  /* border-right: 3px solid var(--text-blue-current); */
   width: 0;
   opacity: 1;
   animation: typing-name 1s steps(15, end) forwards, blink 0.7s infinite 2s;
@@ -151,7 +151,7 @@
   color: var(--text-blue-current);
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid var(--text-blue-current);
+  /* border-right: 3px solid var(--text-blue-current); */
   width: 0;
   opacity: 1;
   animation: typing 2s steps(25, end) forwards 1s, blink 0.7s infinite 5.5s;

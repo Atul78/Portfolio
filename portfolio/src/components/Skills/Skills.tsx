@@ -46,10 +46,6 @@ const TechnicalSkills = () => {
               <img src={images.git} alt="GitHub" className="common-img" />
               <p>GitHub</p>
             </div>
-            <div className="gitlab">
-              <img src={images.gitlab} alt="GitLab" className="common-img" />
-              <p>GitLab</p>
-            </div>
           </div>
         </div>
       </div>
